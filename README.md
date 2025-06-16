@@ -79,3 +79,7 @@ MIT License (add a LICENSE file if you want).
 ---
 
 **Happy hacking your first dApp!**
+
+## Author
+
+Ibrahim Aliyu S Kamina
