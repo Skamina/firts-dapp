@@ -40,13 +40,44 @@
 
         // Replace the following two values. 
         //Make sure the MoodContractAddress is in double single/double quotes 
-        const MoodContractAddress = "...";
-        const MoodContractABI = [];
+const MoodContractAddress = "0xCe197ec7170e85735Bd4fe92bFfc8041eFEA7aF2";
+const MoodContractABI = [
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_mood",
+        "type": "string"
+      }
+    ],
+    "name": "setMood",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getMood",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]; // This is the ABI of the Mood contract
+
+// MoodContractABI is the Application Binary Interface (ABI) of the Mood contract.
+// It defines how to interact with the contract, including its functions and their parameters.
+// The ABI is used by the client to encode and decode data when calling contract functions.
 
         const MoodContractInstance = getContract({
-          address: MoodContractAddress,
-          abi: MoodContractABI,
-          client: walletClient,
+address: MoodContractAddress,
+abi: MoodContractABI,
+client: walletClient,
         });
 
 
@@ -66,8 +97,8 @@
 
 
       <div>
-        <h1>This is my dApp!</h1>
-        <p>Here I can set or get the mood:</p>
+        <h1>This is your firt dApp!</h1>
+        <p>Here you can set or get the mood:</p>
         <label for="mood">Input Mood:</label> <br />
         <input type="text" id="mood" />
 
